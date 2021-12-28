@@ -90,6 +90,7 @@
             this.btnVender.TabIndex = 7;
             this.btnVender.Text = "Guardar Venta";
             this.btnVender.UseVisualStyleBackColor = true;
+            this.btnVender.Click += new System.EventHandler(this.btnVender_Click);
             // 
             // txtPrecio
             // 

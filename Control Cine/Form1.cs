@@ -37,5 +37,17 @@ namespace Control_Cine
             groupBox2.Enabled = true;
             groupBox1.Enabled = false;
         }
+
+        private void btnVender_Click(object sender, EventArgs e)
+        {
+            if (txtVNombre.TextLength > 0 && txtVPel.TextLength > 0)
+            {
+                dataGridView1.Rows.Add(txtVNombre.Text, txtVPel.Text, txtPrecio.Text);
+            }
+            else
+            {
+                MessageBox.Show("Llena los campos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }
