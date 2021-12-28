@@ -68,5 +68,17 @@ namespace Control_Cine
                 MessageBox.Show("Ocurrio un error.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            if (dataGridView2.CurrentRow != null)
+            {
+                dataGridView2.Rows.Remove(dataGridView2.CurrentRow);
+            }
+            else
+            {
+                MessageBox.Show("Elige la renta para cancelar.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }
