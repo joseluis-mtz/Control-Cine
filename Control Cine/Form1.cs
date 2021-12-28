@@ -49,5 +49,24 @@ namespace Control_Cine
                 MessageBox.Show("Llena los campos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void btnRentar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (txtNombre.TextLength > 0 && txtTel.Text != null)
+                {
+                    dataGridView2.Rows.Add(txtNombre.Text, txtTel.Text, cmbPel.SelectedItem.ToString(), DateTime.Now.ToShortDateString(), dtPicker.Value.ToShortDateString());
+                }
+                else
+                {
+                    MessageBox.Show("Llena los campos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Ocurrio un error.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }

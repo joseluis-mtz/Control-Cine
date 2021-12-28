@@ -257,6 +257,7 @@
             this.btnRentar.TabIndex = 8;
             this.btnRentar.Text = "Rentar";
             this.btnRentar.UseVisualStyleBackColor = true;
+            this.btnRentar.Click += new System.EventHandler(this.btnRentar_Click);
             // 
             // dtPicker
             // 
